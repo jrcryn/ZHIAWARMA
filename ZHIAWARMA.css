@@ -57,7 +57,7 @@
                 top: 70px;
                 height: 0;
                 width: 200px;
-                background: (255, 255, 255, 0.1);
+                background: #6B9253;
                 backdrop-filter: blur(10px);
                 border-radius: 10px;
                 overflow: hidden;
@@ -75,7 +75,7 @@
 
 
             /*RESPONSIVE TRANSITION (NAVIGATION BAR)*/
-            @media (max-width: 670px) {
+            @media (max-width: 680px) {
                 .navbar {
                     height: 60px;
                 }
