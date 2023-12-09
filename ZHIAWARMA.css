@@ -75,7 +75,7 @@
 
 
             /*RESPONSIVE TRANSITION (NAVIGATION BAR)*/
-            @media (max-width: 680px) {
+            @media (max-width: 740px) {
                 .navbar {
                     height: 60px;
                 }
