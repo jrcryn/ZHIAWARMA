@@ -164,29 +164,32 @@ body {
     }
 
 
-    /*Second Section*/
+    /* Second Section */
     div.Main2nd {
-        height: 384px;
         width: auto;
-        background-color: #6B9253;
+        background-color: #6B9253; 
         border-radius: 10px;
+        padding: 40px 20px; /* Adjusted padding for better symmetry*/
     }
+
     h3.our_story {
         font-family: Gagalin;
         font-size: 40px;
         color: white;
         text-align: center;
-        padding-top: 50px;
+        margin-top: 0; /* Remove padding-top */
+        margin-bottom: 5px;
     }
+
     p.our_story2 {
         font-family: Gagalin;
         color: white;
         font-size: 30px;
         text-align: center;
-        margin-left: 110px;
-        margin-right: 110px;
-        margin-top: -17.5px;
+        margin: 10px 30px; /* Adjusted margin for better symmetry */
     }
+
+
 
 
     /*3rd Section*/
