@@ -5,7 +5,6 @@
 }
     nav {
         background: #6B9253; 
-        border-radius: 10px;
         padding: 0 3rem;
     }
     .navbar {
@@ -125,50 +124,72 @@
     font-family: "Canva Sans-Bold";
     src: url('/Fonts/CanvaSans-Bold.otf')format('opentype');
 }
+
 body {
-    background-color:rgb(245, 245, 229);
+    margin: 0;
+    background-color:rgb(245, 245, 229)
 }
 
-
     /*First Section*/
-    img.first {
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 35px;
-        margin-bottom: 50px;
-        width: 90%;
+    .header {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        /*max-height: 600px; /* Can adjust the max-height if needed */
     }
-    h1.Main1st_header {
-        font-family: TAN-ASHFORD;
-        font-size: 60px;
-        position: absolute;
-        bottom: 225px;
-        left: 100px;
-        line-height: 100px;
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
     }
-    p.Main1st_hashtag {
-        font-family: Canva Sans-Bold;
-        font-size: 15px;
-        position: absolute;
-        bottom: 210px;
-        left: 110px;
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
     }
-    p.Main1st_paragraph {
-        font-family: Anonymous Pro;
-        font-size: 20px;
-        position: absolute;
-        bottom: 145px;
-        left: 110px;
-        line-height: 25px;
+
+    img {
+        width: 100%;
+        height: auto;
+        max-height: 100%; /* Make images adaptive in height */
+        object-fit: cover;
     }
+
+            /* Navigation buttons */
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);
+                border: none;
+                padding: 10px;
+                padding-bottom: 13px;
+                outline: none;
+                transition: background-color 0.3s;
+            }
+
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .prev {
+                left: 10px;
+            }
+
+            .next {
+                right: 10px;
+            }
 
 
     /* Second Section */
     div.Main2nd {
         width: auto;
+        margin-top: -5px;
         background-color: #6B9253; 
-        border-radius: 10px;
         padding: 40px 20px; /* Adjusted padding for better symmetry*/
     }
 
