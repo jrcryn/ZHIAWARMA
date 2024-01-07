@@ -5,7 +5,9 @@
 }
     nav {
         background: #6B9253; 
+        border-radius: 10px;
         padding: 0 3rem;
+        margin-bottom: 10px;
     }
     .navbar {
         width: 100%;
@@ -47,11 +49,11 @@
     }
 
 
-
             /*DROPDOWN MENU (NAVIGATION BAR)*/
             .dropdown_menu {
                 display: none;
                 position: absolute;
+                z-index: 1;
                 right: 2rem;
                 top: 70px;
                 height: 0;
@@ -126,7 +128,6 @@
 }
 
 body {
-    margin: 0;
     background-color:rgb(245, 245, 229)
 }
 
@@ -134,12 +135,15 @@ body {
     .header {
         position: relative;
         overflow: hidden;
+        border-radius: 10px;
         width: 100%;
-        /*max-height: 600px; /* Can adjust the max-height if needed */
+        height: auto;
+        max-height: 700px; /* Can adjust the max-height if needed */
     }
 
     .slider {
         display: flex;
+        z-index: -1;
         transition: transform 0.9s ease-in-out;
     }
 
@@ -184,8 +188,9 @@ body {
     /* Second Section */
     div.Main2nd {
         width: auto;
-        margin-top: -5px;
+        margin-top: 10px;
         background-color: #6B9253; 
+        border-radius: 10px;
         padding: 40px 20px; /* Adjusted padding for better symmetry*/
     }
 
