@@ -177,6 +177,7 @@ body {
         font-size: 40px;
         color: white;
         text-align: center;
+        padding-bottom: 10px;
         margin-top: 0; /* Remove padding-top */
         margin-bottom: 5px;
     }
@@ -193,10 +194,11 @@ body {
             /*RESPONSIVE TRANSITION (Second Section)*/
             @media (max-width: 740px) {
                 div.Main2nd {
-                    padding: 30px 15px;
+                    padding: 20px 15px;
                 }
                 h3.our_story {
                     font-size: 30px;
+                    padding-bottom: 5px;
                 }
                 p.our_story2 {
                     font-size: 20px;
@@ -204,7 +206,7 @@ body {
             }
             @media (max-width: 450px) {
                 div.Main2nd {
-                    padding: 20px 10px;
+                    padding: 15px 10px;
                 }
                 h3.our_story {
                     font-size: 20px;
