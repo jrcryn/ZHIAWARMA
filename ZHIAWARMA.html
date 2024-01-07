@@ -51,7 +51,6 @@
    </script><!--Navigation Bar End-->
 
     <main> <!--Not yet Responsive-->
-        <div>
         <div class="header"> <!--First Section Start-->
             <div class="slider">
                 <div class="slide">
@@ -64,18 +63,21 @@
                     <img src="https://via.placeholder.com/1200x600" alt="Slide 3">
                 </div>
             </div>
-        
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="static-text">
+                <h1 class="Main1st_header">We believe<br>good food offer<br>great smile ;)</h1>
+                <p class="Main1st_hashtag">#SATISFYOURCRAVINGS</p>
+                <p class="Main1st_paragraph">We provide the most tastiest and most affordable shawarmas'<br>made of quality meat, beef and chicken.</p>
+            </div>
         </div>
         
         <script>
             let currentSlide = 0;
-        
+            const autoSlideInterval = 5000; //Interval in milliseconds (e.g., 5000ms for 5 seconds)
+
             function showSlide(index) {
                 const slider = document.querySelector('.slider');
                 const slides = document.querySelectorAll('.slide');
-        
+
                 if (index >= slides.length) {
                     currentSlide = 0;
                 } else if (index < 0) {
@@ -83,17 +85,22 @@
                 } else {
                     currentSlide = index;
                 }
-        
+
                 slider.style.transform = `translateX(${-currentSlide * 100}%)`;
             }
-        
+
             function nextSlide() {
                 showSlide(currentSlide + 1);
             }
-        
+
             function prevSlide() {
                 showSlide(currentSlide - 1);
             }
+
+            // Auto slide change
+            setInterval(() => {
+                nextSlide();
+            }, autoSlideInterval);
         </script> <!--First Section End-->
         
 
