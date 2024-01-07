@@ -1,8 +1,8 @@
 # ZHIAWARMA
 ZHIAWARMA Website Project
 
-City College of Calamba (Proj Year Started: 2023)
-Course/Subject: IT 221 - Web Design and Programming
+City College of Calamba
+Course/Subject: IT 221 - Web Design and Programming (2nd Year - 1st SEM)
 Lecturer: Pamela M. Bongalonta, MSIT
 Section: 2 - IT6
 
