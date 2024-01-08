@@ -301,3 +301,30 @@ body {
         font-weight: 900;
         font-size: 30px;
     }
+
+    .faq-container {
+        max-width: 1330px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+    }
+    
+    .faq-question {
+        font-family: "TAN-ASHFORD";
+        padding: 15px;
+        padding-bottom: 1px;
+        color: black;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    .faq-answer {
+        font-family: Anonymous Pro;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 15px;
+    }
+
+    
+
