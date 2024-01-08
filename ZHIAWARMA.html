@@ -7,12 +7,31 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" 
-    referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="ZHIAWARMA.css">
-    <link rel="stylesheet" href="">
+    referrerpolicy="no-referrer"/> <!--CSS File for Font-Awesome icons -->
+    <link rel="stylesheet" href="ZHIAWARMA.css"> <!--Main CSS File-->
     <title>Home - ZHIAWARMA</title>
 </head>
 <body>
+    <!--To-top-button Start-->
+    <a href="#" class="to-top-button"> 
+        <i class="fas fa-chevron-up"></i>
+        <p class="to-top-button-alt">Back to top</p>
+    </a> 
+    
+    <script>
+        const toTop = document.querySelector(".to-top-button");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            }
+            else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script>
+    <!--To-top-button End-->
+
    <!--Responsive-->
    <nav> <!--Navigation Bar Start-->
         <div class="navbar">
@@ -113,5 +132,8 @@
         <h2 class="faq">Frequently Asked Questions:</h2>
     </div>
 </main>
+<footer>
+
+</footer>
 </body>
 </html>
