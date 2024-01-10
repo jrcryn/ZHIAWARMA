@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.faq-block {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question {
+    padding: 15px;
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.faq-answer {
+    padding: 15px;
+    display: none;
+}
+
+.faq-block.active .faq-answer {
+    display: block;
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Frequently Asked Questions</title>
+</head>
+<body>
+    <div class="faq-container">
+        <div class="faq-block">
+            <div class="faq-question">Question 1</div>
+            <div class="faq-answer">Answer 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">Question 2</div>
+            <div class="faq-answer">Answer 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+        </div>
+        <!-- Repeat the structure for more questions -->
+    </div>
+</body>
+</html>
