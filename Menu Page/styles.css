@@ -1,0 +1,73 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: hsl(115, 100%, 45%);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: repeat(3, 6fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    align-items: stretch;
+}
+
+.menu-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 / span 3;
+}
+
+.picture-holder {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.picture-holder img {
+    max-width: 45%;
+    height: 65%;
+    border-radius:10%;
+    box-shadow: 0 0 0px rgba(243, 240, 240, 0.521);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.price-box {
+    font-size: 18px;
+    color: #f4f4f4;
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.description-box {
+    padding: 10px;
+    text-align: center;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+footer {
+    /* Add your desired styles for the footer here */
+}
