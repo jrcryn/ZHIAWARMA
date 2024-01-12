@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+   
+}
+
+.Main5th {
+    display: flex;
+    padding: 30px auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
