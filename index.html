@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/> <!--CSS File for Font-Awesome icons -->
+    <link rel="stylesheet" href="ZHIAWARMA.css"> <!--Main CSS File-->
+    <title>Home - ZHIAWARMA</title>
+</head>
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+
+/*NAVIGATION BAR CSS*/
+@font-face {
+    font-family: "Gagalin";
+    src: url('/Fonts/Gagalin-Regular.otf')format('opentype');
+}
+    nav {
+        background: #6B9253; 
+        border-radius: 10px;
+        padding: 0 3rem;
+        margin-bottom: 10px;
+    }
+    .navbar {
+        width: 100%;
+        height: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo a {
+        font-size: 40px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-family: Gagalin;
+        transition: 0.3s;
+    }
+
+    /*Order Now Button*/
+    a.ordernow {
+        background-color: orange;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+    }
+    a:hover.ordernow {
+        color: orange;
+        background-color: white;
+    }
+    a:hover.link {
+        color: orange;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    
+    li {
+        list-style-type: none;
+
+    }
+    .links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .toggle_btn {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+    .toggle_btn:hover {
+        color: orange;
+    }
+
+
+            /*DROPDOWN MENU (NAVIGATION BAR)*/
+            .dropdown_menu {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                right: 2rem;
+                top: 70px;
+                height: 0;
+                width: 200px;
+                background: #6B9253;
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+                overflow: hidden;
+                transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .dropdown_menu li {
+                padding: 0.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .dropdown_menu.open {
+                height: 130px;
+            }
+
+
+            /*RESPONSIVE TRANSITION (NAVIGATION BAR)*/
+            @media (max-width: 740px) {
+                .navbar {
+                    height: 60px;
+                }
+                .logo a {
+                    font-size: 30px;
+                }    
+                .links {
+                    display: none;
+                }
+                .toggle_btn {
+                    display: block;
+                }
+                .dropdown_menu {
+                    display: block;
+                }
+            }
+            @media (max-width: 450px) {
+                .navbar {
+                    height: 60px;
+                }
+                .logo a {
+                    font-size: 30px;
+                }
+                .dropdown_menu {
+                    display: block;
+                    left: 2rem;
+                    width: unset;
+                }
+            }
+
+
+/*MAIN CSS*/ /*Note: Whole MAIN is not yet Responsive*/
+@font-face {
+    font-family: "TAN-ASHFORD";
+    src: url('/Fonts/TAN-ASHFORD.otf')format('opentype');
+}
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url('/Fonts/AnonymousPro.otf')format('opentype');
+}
+@font-face {
+    font-family: "Canva Sans-Regular";
+    src: url('/Fonts/CanvaSans-Regular.otf')format('opentype');
+}
+@font-face {
+    font-family: "Canva Sans-Bold";
+    src: url('/Fonts/CanvaSans-Bold.otf')format('opentype');
+}
+
+body {
+    background-color:rgb(245, 245, 229);
+}
+
+
+    /* To-top-button */
+    .to-top-button {
+        background-color: white;
+        color: black;
+        border-radius: 50%;
+        border: 2.5px solid black;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        bottom: 20px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        text-decoration: none;
+        transition: all 0.3s;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .to-top-button.active {
+        cursor: pointer;
+        pointer-events: all;
+        opacity: 1;
+        bottom: 30px;
+    }
+
+            .to-top-button-alt {
+                font-family: "Canva Sans-Bold";
+                font-size: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                color: black;
+                position: fixed;
+                bottom: 25px;
+                right: 95px;
+                display: none;
+            }
+
+            .to-top-button:hover {
+                color: orange;
+                    .to-top-button-alt {
+                        display: flex;
+                    }
+            }
+            
+
+    /*First Section*/
+    .header {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        max-height: 700px; /* Can adjust the max-height if needed */
+    }
+
+    .slider {
+        display: flex;
+        z-index: -1;
+        transition: transform 0.9s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 100%;
+        height: 1000px;
+        max-height: 100%; /* Make images adaptive in height */
+        object-fit: cover;
+    }
+
+    .static-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    }
+            /*Part of the Text*/
+            h1.Main1st_header {
+                font-family: TAN-ASHFORD;
+                font-size: 60px;
+                font-size: clamp(30px, 8vw, 60px);
+            }
+            p.Main1st_hashtag {
+                font-family: Canva Sans-Bold;
+                font-size: 15px;
+            }
+            p.Main1st_paragraph {
+                font-family: Anonymous Pro;
+                font-size: 20px;
+            }
+
+                    /*RESPONSIVE TRANSITION (text)*/
+                    @media (max-width: 740px) {
+                        h1.Main1st_header {
+                            font-size: 30px;
+                        }
+                        p.Main1st_hashtag {
+                            font-size: 10px;
+                        }
+                        p.Main1st_paragraph {
+                            font-size: 15px;
+                        }
+                        img {
+                            height: 450px;
+                        }
+                    }
+                    @media (max-width: 450px) {
+                        h1.Main1st_header {
+                            font-size: 20px;
+                        }
+                        p.Main1st_hashtag {
+                            font-size: 5px;
+                        }
+                        p.Main1st_paragraph {
+                            font-size: 7.5px;
+                        }
+                        img {
+                            height: 300px;
+                        }
+                    }
+
+
+    /* Second Section */
+    div.Main2nd {
+        width: auto;
+        margin-top: 10px;
+        background-color: #6B9253; 
+        border-radius: 10px;
+        padding: 40px 20px; /* Adjusted padding for better symmetry*/
+    }
+
+    h3.our_story {
+        font-family: Gagalin;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        padding-bottom: 10px;
+        margin-top: 0; /* Remove padding-top */
+        margin-bottom: 5px;
+    }
+
+    p.our_story2 {
+        font-family: Gagalin;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        margin: 10px 30px; /* Adjusted margin for better symmetry */
+    }
+
+            /*RESPONSIVE TRANSITION (Second Section)*/
+            @media (max-width: 740px) {
+                div.Main2nd {
+                    padding: 20px 15px;
+                }
+                h3.our_story {
+                    font-size: 30px;
+                    padding-bottom: 5px;
+                }
+                p.our_story2 {
+                    font-size: 20px;
+                }
+            }
+            @media (max-width: 450px) {
+                div.Main2nd {
+                    padding: 15px 10px;
+                }
+                h3.our_story {
+                    font-size: 25px;
+                    margin-bottom: 0;
+                }
+                p.our_story2 {
+                    font-size: 17.5px;
+                    margin: 5px 10px 5px 10px; 
+                }
+            }
+
+    
+    /*3rd Section*/
+    h2.faq {
+        font-family: TAN-ASHFORD;
+        margin: 75px 0 0 100px;
+        font-weight: 900;
+        font-size: 30px;
+        
+    }
+
+            /*RESPONSIVE TRANSITION (h2.faq)*/
+            @media (max-width: 800px) {
+                h2.faq {
+                    text-align: center;
+                    margin: 50px 0 0 0;
+                }
+            }
+            @media (max-width: 450px) {
+                h2.faq {
+                    text-align: center;
+                    margin: 40px 0 0 0;
+                    font-size: 20px;
+                }
+                .faq-block {
+                    margin-top: -30px;
+                }
+                .faq-question {
+                    font-size: 15px;
+                }
+            }
+
+    .faq-container {
+        max-width: 1330px;
+        margin: 50px auto 75px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+    }
+    
+    .faq-question {
+        font-family: "TAN-ASHFORD";
+        padding: 15px;
+        padding-bottom: 1px;
+        color: black;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    .faq-answer {
+        font-family: Anonymous Pro;
+        text-align: justify;
+        font-size: 18px;
+        line-height: 30px;
+        padding: 15px;
+    }
+
+
+
+    /*4th Section*/
+    .Main4th {
+        background-color: #333;
+        border-radius: 10px 10px 0 0;
+        padding: 20px 20px 17.5px 20px;
+        margin-top: -10px; 
+    }
+    
+    .google_maps {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        margin: 0;
+        border: none;
+    }
+
+    /*5th Section*/
+    div.Main5th {
+        background-color: #333;
+        border-radius: 0 0 10px 10px;
+        margin-top: -16px;
+        color: white;
+        font-family: "Gagalin";
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .foot_container {
+        max-width: 1200px;
+        margin: 10px auto 40px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 50px;
+    }
+
+    .foot-1 {
+        font-family: "Gagalin";
+        margin-bottom: -10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: left;
+    }
+
+    .foot-2 {
+        font-family: "Gagalin";
+        margin-bottom: -15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-align: left;
+    }
+
+    .foot-zhia {
+        margin-bottom: -10px;
+    }
+
+    .fb_link, .num {
+        font-size: 25px;
+    }
+
+    .phone, .num {
+        display: inline;
+    }
+</style>
+<body>
+    <!--To-top-button Start-->
+    <a href="#" class="to-top-button"> 
+        <i class="fas fa-chevron-up"></i>
+        <p class="to-top-button-alt">Scroll to top</p>
+    </a> 
+    
+    <script>
+        const toTop = document.querySelector(".to-top-button");
+
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 100) {
+                toTop.classList.add("active");
+            }
+            else {
+                toTop.classList.remove("active");
+            }
+        })
+    </script>
+    <!--To-top-button End-->
+
+   <!--Responsive-->
+   <nav> <!--Navigation Bar Start-->
+        <div class="navbar">
+        <div class="logo"><a href="/index.html">ZHIAWARMA</a></div>
+        <ul class="links">
+            <li><a class="link" href="#section1">Our Story</a></li>
+            <li><a class="link" href="#section2">FAQ</a></li>
+            <li><a class="link" href="#section3">Location & Contact</a></li>
+        </ul>
+        <div>
+            <p><a class="ordernow" href="index1.html">Order Now!</a></p>
+        </div>
+        
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu open">
+                <li><a href="#section1">Our Story</a></li>
+                <li><a href="#section2">FAQ</a></li>
+                <li><a href="#section3">Location & Contact</a></li>
+        </div>
+        </div>
+   </nav>
+   
+   <script> 
+        const toggle_Btn = document.querySelector('.toggle_btn')
+        const toggle_BtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggle_Btn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggle_BtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+   </script><!--Navigation Bar End-->
+
+    <main> <!--Not yet Responsive-->
+        <div class="header"> <!--First Section Start-->
+            <div class="slider">
+                <div class="slide">
+                    <img src="/Images/422967778_1537029983807555_6723582460965212811_n.webp" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="/Images/423422357_1602097357282958_3944525263467111183_n.webp" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="/Images/423568709_1052311435880465_423554792295594396_n.jpg" alt="Slide 3">
+                </div>
+                <div class="slide">
+                    <img src="/Images/423600099_932587511769335_251737458689938290_n.jpg" alt="Slide 4">
+                </div>
+                <div class="slide">
+                    <img src="/Images/423619610_1619133625562636_4149264932368955185_n.jpg" alt="Slide 5">
+                </div>
+            </div>
+            <div class="static-text">
+                <h1 class="Main1st_header">We believe<br>good food offer<br>great smile ;)</h1>
+                <p class="Main1st_hashtag">#SATISFYOURCRAVINGS</p>
+                <p class="Main1st_paragraph">We provide the most tastiest and most affordable shawarmas' made of quality meat, beef and chicken.</p>
+            </div>
+        </div>
+        
+        <script>
+            let currentSlide = 0;
+            const autoSlideInterval = 5000; //Interval count in milliseconds (example., 5000ms for 5 seconds)
+
+            function showSlide(index) {
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+
+                if (index >= slides.length) {
+                    currentSlide = 0;
+                } else if (index < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = index;
+                }
+
+                slider.style.transform = `translateX(${-currentSlide * 100}%)`;
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            // Auto slide change
+            setInterval(() => {
+                nextSlide();
+            }, autoSlideInterval);
+        </script> <!--First Section End-->
+        
+
+    <div class="Main2nd" id="section1"> <!--Second Section Start-->
+        <h3 class="our_story">Our Story</h3>
+        <p class="our_story2">Marites Bugarin is a full-time mom and an entrepreneur based in Calamba City, Laguna. Being a mom and, as time went on, 
+            grasping the knowledge and ability to deliciously cook, Marites took advantage of her abilities. In 2023, she started her shawarma business 
+            called ZHIAWARMA, named after her loving daughter zhia, now offering delicious shawarma delicacies that are homemade and crafted with 
+            years of experience in cooking.</p>
+    </div> <!--Second Section End-->
+
+    <div class="Main3rd" id="section2"> <!--Third Section Start-->
+        <h2 class="faq">Frequently Asked Questions:</h2>
+    
+    <div class="faq-container">
+        <div class="faq-block" class="first_faq">
+            <div class="faq-question">What is a Shawarma?</div>
+            <div class="faq-answer">Shawarma is a popular Middle Eastern street food made with thinly sliced seasoned meat, typically served in a pita bread or flatbread wrap with various toppings and sauces.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">What meats are commonly used in Shawarmas?</div>
+            <div class="faq-answer">Chicken, beef, and lamb are the most common meats used in shawarmas. Some places also offer a combination of these meats.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">What toppings can I add to my Shawarma?</div>
+            <div class="faq-answer">Common toppings include lettuce, tomatoes, onions, cucumbers, pickles, and tahini sauce. Some places offer additional options like hummus, tabbouleh, or hot sauce.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">How should I eat a shawarma wrap without making a mess?</div>
+            <div class="faq-answer">Shawarma can be messy to eat. It's best to wrap one end of the paper or foil around the bottom and eat it from the top, gradually peeling it down as you go.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">Are shawarmas healthy?</div>
+            <div class="faq-answer">Shawarmas can be a relatively healthy choice, especially if you load up on fresh veggies and opt for lean meats. However, the calorie and fat content can vary, so it's a good idea to ask for nutritional information if you're concerned about your diet.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">What's the best drink to pair with a shawarma?</div>
+            <div class="faq-answer">Common drink choices to pair with shawarma include soda, iced tea, or traditional Middle Eastern beverages like mint lemonade or yogurt-based drinks.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">Is shawarmas safe to eat if I have food allergies?</div>
+            <div class="faq-answer">Shawarma places usually provide allergy information on their menu. If you have food allergies, inform the staff so they can accommodate your dietary needs.</div>
+        </div>
+        <div class="faq-block">
+            <div class="faq-question">What are the traditional side dishes to order with shawarma?</div>
+            <div class="faq-answer">Traditional sides include falafel, hummus, baba ghanoush, and tabbouleh. Some places also serve French fries or rice as side options.</div>
+        </div>
+        <div class="faq-block" class="last_faq">
+            <div class="faq-question">Can I customize my shawarma order?</div>
+            <div class="faq-answer">Most shawarma places allow customization. You can often choose the type of meat, toppings, and level of spiciness. Some places also offer different bread options.</div>
+        </div>
+    </div> 
+</div> <!--Third Section End-->
+</main>
+
+<footer>
+    <div class="Main4th" id="section3"> <!--Fourth Section Start-->
+        <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d966.9282362614452!2d121.16669426955639!3d14.211578999139384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd63d4cdb90f59%3A0xbbc8bf460a54eed0!2sHappy%20Dent!5e0!3m2!1sen!2sph!4v1705046555812!5m2!1sen!2sph" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div> 
+
+    <div class="Main5th"> 
+        <div class="foot_container">
+            <div>
+                <div class="foot-1"><h3>Location</h3></div>
+                <div class="foot-2"><p>Ground Floor, FRH Building, S V Rizal St, 5, Calamba, 4027 Laguna</p></div>
+            </div>
+            <div>
+                <div class="foot-1"><h3>Contact Us</h3></div>
+                <div class="foot-2"><p class="phone">Phone: </p><p class="num">+63 0961-421-8547</p></div>
+                <div class="foot-2"><p>Facebook: <a class="fb_link" href="https://www.facebook.com/profile.php?id=100076357490777">Marites Bugarin</a></p></div>
+            </div>
+            <div>
+                <div class="foot-1"><h1 class="foot-zhia">ZHIAWARMA</h1></div>
+                <div class="foot-2"><p>&copy; 2024 ZHIAWARMA. All rights reserved.</p></div>
+            </div>
+        </div>
+    </div> <!--Fourth Section End-->
+</footer>
+</body>
+</html>
