@@ -265,18 +265,24 @@ body {
    </nav>
    
    <script> 
-        const toggle_Btn = document.querySelector('.toggle_btn')
-        const toggle_BtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggle_Btn = document.querySelector('.toggle_btn');
+        const toggle_BtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        dropDownMenu.classList.remove('open');
 
         toggle_Btn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
 
             toggle_BtnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'
-            : 'fa-solid fa-bars'
-        }
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars';
+        };
+    });
+    </script>
+
    </script><!--Navigation Bar End-->
 
     
