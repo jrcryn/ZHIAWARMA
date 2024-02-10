@@ -56,6 +56,14 @@
         padding-right: 20px;
         border-radius: 10px;
     }
+    a.ordernow1 {
+        background-color: orange;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+    }
     a:hover.ordernow {
         color: orange;
         background-color: white;
@@ -107,7 +115,7 @@
                 justify-content: center;
             }
             .dropdown_menu.open {
-                height: 130px;
+                height: 190px;
             }
 
 
@@ -126,6 +134,12 @@
                     display: block;
                 }
                 .dropdown_menu {
+                    display: block;
+                }
+                .ordernow {
+                    display: none;
+                }
+                a.ordernow1 {
                     display: block;
                 }
             }
@@ -512,9 +526,10 @@ body {
             <i class="fa-solid fa-bars"></i>
         </div>
         <div class="dropdown_menu open">
-                <li><a href="#section1">Our Story</a></li>
-                <li><a href="#section2">FAQ</a></li>
-                <li><a href="#section3">Location & Contact</a></li>
+                <li><a class="link" href="#section1">Our Story</a></li>
+                <li><a class="link" href="#section2">FAQ</a></li>
+                <li><a class="link" href="#section3">Location & Contact</a></li>
+                <li><a class="ordernow1" href="index1.html">Order Now!</a></li>
         </div>
         </div>
    </nav>
