@@ -33,21 +33,20 @@ html {
         transition: 0.3s;
     }
 
-        /*Order Now Button*/
-        .ordernow {
-            background-color: orange;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 15px;
-            padding-right: 15px;
-            border-radius: 10px;
-        }
-
-    p:hover.ordernow {
-        color: black;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /*Order Now Button*/
+    a.ordernow {
+        background-color: orange;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
     }
-    a:hover {
+    a:hover.ordernow {
+        color: orange;
+        background-color: white;
+    }
+    a:hover.link {
         color: orange;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
@@ -94,7 +93,7 @@ html {
                 justify-content: center;
             }
             .dropdown_menu.open {
-                height: 170px;
+                height: 130px;
             }
 
 
@@ -226,7 +225,7 @@ body {
 
     img {
         width: 100%;
-        height: auto;
+        height: 1000px;
         max-height: 100%; /* Make images adaptive in height */
         object-fit: cover;
     }
@@ -239,7 +238,7 @@ body {
         color: white;
         text-align: center;
         font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
             /*Part of the Text*/
             h1.Main1st_header {
@@ -267,9 +266,23 @@ body {
                         p.Main1st_paragraph {
                             font-size: 15px;
                         }
+                        img {
+                            height: 450px;
+                        }
                     }
                     @media (max-width: 450px) {
-                        
+                        h1.Main1st_header {
+                            font-size: 20px;
+                        }
+                        p.Main1st_hashtag {
+                            font-size: 5px;
+                        }
+                        p.Main1st_paragraph {
+                            font-size: 7.5px;
+                        }
+                        img {
+                            height: 300px;
+                        }
                     }
 
 
